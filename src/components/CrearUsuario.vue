@@ -52,7 +52,7 @@ export default {
                 confirmacion_contrasena:this.confirmacion_contrasena
             }
             console.log(data);
-            const peticion= await axios.post('https://myoptimalbusiness-app.herokuapp.com/user/create',data)
+            const peticion= await axios.post('https://myoptimalbusiness-api.herokuapp.com/user/create',data)
                 .then(
                     res=>{
                         console.log(err)

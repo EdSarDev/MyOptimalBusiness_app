@@ -43,7 +43,7 @@
 
             processAuthUser:function(){
                 var self=this
-                axios.post("http://https://myoptimalbusiness-app.herokuapp.com/user/auth/",self.user_in, {headers: {}})
+                axios.post("http://https://myoptimalbusiness-api.herokuapp.com/user/auth/",self.user_in, {headers: {}})
 
                     .then((result) => {
                         if (result.data.Autenticado){
