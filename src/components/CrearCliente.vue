@@ -2,7 +2,7 @@
     <div id="InicioSesion">
         <div class="block"> 
             <div class="col-md-4"></div>
-            <div class="col-md-4 m-auto bg-muted text-light p-1">
+            <div class="col-md-4 m-auto bg-muted text-dark p-1">
                 <h2 class="text-center tipoh1">Crear cliente</h2>
                 
                 <form v-on:submit.prevent="createClient">
