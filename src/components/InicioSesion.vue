@@ -52,12 +52,14 @@
                             this.$router.push({name:"CrearUsuario"})
 
                         }else{
-                            this.salida = "Autorización fallida";
+                            this.salida = "Contraseña Incorrecta";
                         }
                     })
 
                     .catch((error) => {
-                        this.salida="Se ha producido un error";
+                        if (error.response.status == "404"){
+                            this.salida="El usuario no existe";
+                        }
                     })
             }
         },
