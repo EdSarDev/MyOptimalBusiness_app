@@ -2,7 +2,9 @@ import Vue from 'vue'
 import vueRouter from 'vue-router'
 
 import InicioSesion from '../components/InicioSesion'
-import Cliente from '../components/Cliente'
+import MenuOpciones from '../components/MenuOpciones'
+import CrearCliente from '../components/CrearCliente'
+import BuscarCliente from '../components/BuscarCliente'
 import CrearUsuario from '../components/CrearUsuario'
 import App from '../App'
 
@@ -22,9 +24,19 @@ const router=new vueRouter({
       component: InicioSesion
     },
     {
-      path:'/Cliente',
-      name:"Cliente",
-      component: Cliente
+      path:'/MenuOpciones',
+      name:'MenuOpciones',
+      component: MenuOpciones
+    },
+    {
+      path:'/CrearCliente',
+      name:"CrearCliente",
+      component: CrearCliente
+    },
+    {
+      path:'/BuscarCliente',
+      name:"BuscarCliente",
+      component: BuscarCliente
     },
     {
       path:'/CrearUsuario',

@@ -49,17 +49,16 @@
                         if (result.data.Autenticado){
                             this.salida = "Autorización exitosa";
                             self.$emit('log-in', self.user_in.username)
-                            this.$router.push({name:"CrearUsuario"})
+                            this.$router.push({name:"MenuOpciones"})
+                            //this.$router.push({name:"CrearUsuario"})
 
                         }else{
-                            this.salida = "Contraseña Incorrecta";
+                            this.salida = "Autorización fallida";
                         }
                     })
 
                     .catch((error) => {
-                        if (error.response.status == "404"){
-                            this.salida="El usuario no existe";
-                        }
+                        this.salida="Se ha producido un error";
                     })
             }
         },
