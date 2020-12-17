@@ -3,22 +3,25 @@
         <div class="block"> 
             <div class="col-md-4"></div>
             <div class="col-md-4 m-auto bg-muted text-light p-1">
-                <h2 class="text-center tipoh1">¡Bienvenido(a) a {nombre_empresa}</h2>
-                <h4 class="text-center tipoh1">Inicia Sesión para continuar</h4>
+                <h2 class="text-center tipoh4">¡Bienvenido(a) al sistema de información de {nombre_empresa}!</h2>
+                <h4 class="text-center tipoh1">Inicia sesión para continuar</h4>
                 
                 <form v-on:submit.prevent="processAuthUser">
                     <div class="form-group">
-                        <label for="username"> <strong>Login</strong></label>
+                        <label for="username"> <strong>Usuario:</strong></label>
                         <input type="login" v-model="user_in.username" class="form-control" id="login" name="login" required placeholder="Login">
                     </div>
                     <div class="form-group">
-                        <label for="password"><strong>Contraseña</strong></label>
+                        <label for="password"><strong>Contraseña:</strong></label>
                         <input type="password" v-model="user_in.password" class="form-control" id="contrasena" name="contrasena" required placeholder="Password">
                     </div>
-                    <button type="submit" class="btn btn-info">Continuar</button>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-info">Continuar</button>
+                    </div>
                 </form>
-                
-                <h3> {{salida}}</h3>
+                <div class="col-md-12 text-center">
+                    <h3> {{salida}}</h3>
+                </div>
 
             </div>
             <div class="col-md-4"></div>      
@@ -76,24 +79,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    #InicioSesion{
-        background-image: url('../assets/fondo.jpg');
-        background-position: center center;	  
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    #InicioSesion:before {
-        content:'';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.267);
     }
 
 </style>

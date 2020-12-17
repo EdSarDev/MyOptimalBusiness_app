@@ -1,6 +1,7 @@
 <template>
+
 <body>
-  <div class="container-fluid p-0" id="app">
+  <div class="container-fluid p-0 fondo" id="app">
 
     <div class="header">
     </div>
@@ -14,7 +15,8 @@
       <div class="col-md-12">
         <div class="row bt-2">
           <div class="col-md-12 text-center text-white border-top mt-2 p-1 border-white">
-            <img src="/assets/Logo_MOB_H.png" alt=""><strong>My Optimal Business, Inc.</strong> Derechos Reservados
+            <img src="./assets/logo1.png" width="130" height="38">
+            <strong> | My Optimal Business Inc. | </strong> Derechos reservados
           </div>
         </div>
       </div>
@@ -69,5 +71,13 @@ export default {
     font-family: 'Roboto', serif;
     font-weight: 700;
   } 
+
+  .fondo{
+        background-image: url('../assets/fondo.jpg');
+        background-position: center center;	  
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+  }
       
 </style>
