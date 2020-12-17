@@ -1,8 +1,8 @@
 <template>
     <form @submit="handleSubmit">
-        <h3>Crear cliente </h3>
+        <h3>Crear usuario </h3>
         <div class="form-group">
-            <label> Nombre </label>
+            <label> username </label>
             <input type="text" class="form-control" v-model="nombre" placeholder="Nombre"/>
         </div>
             <div class="form-group">
@@ -27,20 +27,17 @@
 
 <script>
 
-import axios from "axios"
+import axios from 'axios';
 
 export default {
-
     name:'CrearUsuario',
-
-    data(){
+    data:function(){
         return {
-            nombre:'',
-            apellido:'',
-            email:'',
-            contrasena:'',
-            confirmacion_contrasena:''
-
+            username:"",
+            nombres:"",
+            email:"",
+            rol:""
+            
         }
     },
 

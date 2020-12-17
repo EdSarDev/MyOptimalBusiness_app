@@ -14,7 +14,7 @@ const router=new vueRouter({
     {
       path: '/',
       name: "root",
-      component: App
+      component:InicioSesion //TODO App
     },
     {
       path:'/InicioSesion',

@@ -5,17 +5,21 @@
             <div class="col-md-4 m-auto bg-muted text-light p-1">
                 <h2 class="text-center tipoh1">¡Bienvenido(a) a {nombre_empresa}</h2>
                 <h4 class="text-center tipoh1">Inicia Sesión para continuar</h4>
-                <form action>
+                
+                <form v-on:submit.prevent="processAuthUser">
                     <div class="form-group">
-                        <label for="login"> <strong>Login</strong></label>
-                        <input v-model="login" type="login" class="form-control" id="login" name="login" required placeholder="Login">
+                        <label for="username"> <strong>Login</strong></label>
+                        <input type="login" v-model="user_in.username" class="form-control" id="login" name="login" required placeholder="Login">
                     </div>
                     <div class="form-group">
-                        <label for="contrasena"><strong>Contraseña</strong></label>
-                        <input v-model="contrasena" type="password" class="form-control" id="contrasena" name="contrasena" required placeholder="Password">
+                        <label for="password"><strong>Contraseña</strong></label>
+                        <input type="password" v-model="user_in.password" class="form-control" id="contrasena" name="contrasena" required placeholder="Password">
                     </div>
                     <button type="submit" class="btn btn-info">Continuar</button>
                 </form>
+                
+                <h3> {{salida}}</h3>
+
             </div>
             <div class="col-md-4"></div>      
         </div>
@@ -23,25 +27,45 @@
 </template>
 
 <script>
-    import auth from "@/logic/auth";
+    import axios from 'axios';
     export default {
-        name: 'InicioSesion',
-        components: {},
-        data: () => ({
-            login: "",
-            contrasena: ""
-        }),
-
-        methods: {
-            async login() {
-                try {
-                    await auth.login(this.login, this.contrasena);
-                    this.$router.push("/");
-                } catch (error) {
-                    this.error = true;
-                }
+        name: "./InicioSesion",
+        data: function() {
+            return {
+                user_in: {
+                username: "",
+                password: "",
+                },
+                salida:"Esperando autenticación"
             }
+        },
+        methods: {
+
+            processAuthUser:function(){
+                var self=this
+                axios.post("http:///127.0.0.1:8000/user/auth/",self.user_in, {headers: {}})
+
+                    .then((result) => {
+                        if (result.data.Autenticado){
+                            this.salida = "Autorización exitosa";
+                            self.$emit('log-in', self.user_in.username)
+                            this.$router.push({name:"CrearUsuario"})
+
+                        }else{
+                            this.salida = "Autorización fallida";
+                        }
+                    })
+
+                    .catch((error) => {
+                        this.salida="Se ha producido un error";
+                    })
+            }
+        },
+        created:function(){
+            this.login=this.$route.params.login
         }
+        
+
     }
 </script>
 
