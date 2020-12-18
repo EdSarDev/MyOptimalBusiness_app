@@ -1,24 +1,24 @@
 <template>
-    <div>
+    <div class="text-light container">
         <div>
             <h3>Búsqueda de cliente </h3>
         </div>
 
-        <div>
+        <div class="container">
             <label for="id_cliente"> Ingrese el id del cliente  </label>
             <input type="text" v-model="client_in.client_id" required placeholder="IdCliente">
             <input type="button" v-on:click="bringClientData" value="Buscar cliente">
         </div>
-        <div>
-            <label> Identificación del cliente </label>
+        <div class="container">
+            <h3> Identificación del cliente </h3>
             <p> {{idCliente}} </p>
-            <label> Nombre del cliente </label>
+            <h3> Nombre del cliente </h3>
             <p> {{nomCliente}} </p>
-            <label> Apellido del cliente </label>
+            <h3> Apellido del cliente </h3>
             <p> {{apCliente}} </p>
-            <label> Email </label>
+            <h3> Email </h3>
             <p> {{emCliente}} </p>
-            <label> Celular </label>
+            <h3> Celular </h3>
             <p> {{ceCliente}} </p>
 
         </div>
