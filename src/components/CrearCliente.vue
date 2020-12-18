@@ -68,6 +68,7 @@
                         }
                     })
                     .catch((error) => {
+                        console.log(error.response.status)
                         if (error.response.status == 422){
                             this.salida = "El cliente ya existe";
                         }else{
