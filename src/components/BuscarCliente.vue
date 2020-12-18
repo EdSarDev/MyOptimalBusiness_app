@@ -49,7 +49,7 @@
 
             bringClientData:function(){
                 var self=this
-                axios.get("http://127.0.0.1:8000/client/"+this.client_in.client_id)
+                axios.get("https://myoptimalbusiness-api.herokuapp.com/client/"+this.client_in.client_id)
 
                     .then((result) => {
                         self.client_in.client_id=result.data.client_id
