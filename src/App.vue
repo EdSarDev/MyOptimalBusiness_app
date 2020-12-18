@@ -72,7 +72,7 @@ export default {
     font-weight: 700;
   } 
 
-  .fondo{
+  body{
     background-image: url('./assets/fondo.jpg');
     background-position: center center;	  
     background-size: cover;
