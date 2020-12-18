@@ -1,7 +1,7 @@
 <template>
     <div class="text-light container">
         <div>
-            <h3>Búsqueda de cliente </h3>
+            <h3>Búsqueda de cliente: </h3>
         </div>
 
         <div class="container">
@@ -10,15 +10,15 @@
             <input type="button" v-on:click="bringClientData" value="Buscar cliente">
         </div>
         <div class="container">
-            <h5> Identificación del cliente </h5>
+            <h6> Identificación del cliente </h6>
             <p> {{idCliente}} </p>
-            <h5> Nombre del cliente </h5>
+            <h6> Nombre del cliente </h6>
             <p> {{nomCliente}} </p>
-            <h5> Apellido del cliente </h5>
+            <h6> Apellido del cliente </h6>
             <p> {{apCliente}} </p>
-            <h5> Email </h5>
+            <h6> Email </h6>
             <p> {{emCliente}} </p>
-            <h5> Celular </h5>
+            <h6> Celular </h6>
             <p> {{ceCliente}} </p>
 
         </div>

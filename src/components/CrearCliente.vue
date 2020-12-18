@@ -26,8 +26,9 @@
                         <label for="celular"><strong>Teléfono celular del cliente</strong></label>
                         <input type="number" v-model="client_in.celular" class="form-control" id="celular" name="celular" required placeholder="Ingrese número de celular">
                     </div>
-
-                    <button type="submit" class="btn btn-info text-center">Crear cliente</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-info">Crear cliente</button>
+                    </div>
                 </form>
             <h3 class="text-center"> {{respuesta}}</h3>
                 
