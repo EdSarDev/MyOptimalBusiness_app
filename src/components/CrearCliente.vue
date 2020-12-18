@@ -68,11 +68,11 @@
                         }
                     })
                     .catch((error) => {
-                        console.log(Boolean(Number.parseInt(error.response.status)===422));
+                        //console.log(Boolean(Number.parseInt(error.response.status)===422));
                         if (Number.parseInt(error.response.status)===422){
-                            this.salida = "El cliente ya existe";
+                            this.respuesta = "El cliente ya existe";
                         }else{
-                            this.salida="Se ha producido un error";
+                            this.respuesta="Se ha producido un error";
                         }
                         
                     })
