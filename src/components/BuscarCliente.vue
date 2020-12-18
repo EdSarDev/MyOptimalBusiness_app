@@ -10,15 +10,15 @@
             <input type="button" v-on:click="bringClientData" value="Buscar cliente">
         </div>
         <div class="container">
-            <h3> Identificación del cliente </h3>
+            <h5> Identificación del cliente </h5>
             <p> {{idCliente}} </p>
-            <h3> Nombre del cliente </h3>
+            <h5> Nombre del cliente </h5>
             <p> {{nomCliente}} </p>
-            <h3> Apellido del cliente </h3>
+            <h5> Apellido del cliente </h5>
             <p> {{apCliente}} </p>
-            <h3> Email </h3>
+            <h5> Email </h5>
             <p> {{emCliente}} </p>
-            <h3> Celular </h3>
+            <h5> Celular </h5>
             <p> {{ceCliente}} </p>
 
         </div>

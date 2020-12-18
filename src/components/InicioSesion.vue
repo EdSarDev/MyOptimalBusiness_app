@@ -2,8 +2,8 @@
     <div id="InicioSesion">
         <div class="block"> 
             <div class="col-md-4"></div>
-            <div class="col-md-4 m-auto bg-muted text-light p-1">
-                <h2 class="text-center tipoh4">¡Bienvenido(a) al sistema de información de {nombre_empresa}!</h2>
+            <div class="col-md-6 m-auto bg-muted text-light p-1">
+                <h2 class="text-center tipoh1">¡Bienvenido(a) al sistema de información de {nombre_empresa}!</h2>
                 <h4 class="text-center tipoh1">Inicia sesión para continuar</h4>
                 
                 <form v-on:submit.prevent="processAuthUser">

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header>Usuario {{tipo_usuario}}</header>
+        <header class="text-light">Usuario {{tipo_usuario}}</header>
         <nav>
             <input type="button" v-on:click="redirectToUserModule" value="Crear cliente">
             <input type="button" v-on:click="redirectToUserSearch" value="Buscar cliente">
