@@ -7,6 +7,7 @@ import CrearCliente from '../components/CrearCliente'
 import BuscarCliente from '../components/BuscarCliente'
 import CrearUsuario from '../components/CrearUsuario'
 import BuscarProducto from '../components/BuscarProducto'
+import CrearProducto from '../components/CrearProducto'
 import App from '../App'
 
 
@@ -48,6 +49,11 @@ const router=new vueRouter({
       path:'/BuscarProducto',
       name:"BuscarProducto",
       component: BuscarProducto
+    },
+    {
+      path:'/CrearProducto',
+      name:'CrearProducto',
+      component: CrearProducto
     },
   ]
 })
