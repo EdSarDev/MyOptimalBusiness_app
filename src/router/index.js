@@ -6,6 +6,7 @@ import MenuOpciones from '../components/MenuOpciones'
 import CrearCliente from '../components/CrearCliente'
 import BuscarCliente from '../components/BuscarCliente'
 import CrearUsuario from '../components/CrearUsuario'
+import BuscarProducto from '../components/BuscarProducto'
 import App from '../App'
 
 
