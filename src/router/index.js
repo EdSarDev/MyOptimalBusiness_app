@@ -43,6 +43,11 @@ const router=new vueRouter({
       name:'CrearUsuario',
       component: CrearUsuario
     },
+    {
+      path:'/BuscarProducto',
+      name:"BuscarProducto",
+      component: BuscarProducto
+    },
   ]
 })
 export default router
