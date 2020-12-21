@@ -27,9 +27,7 @@
             },
             redirectToProductSearch:function(){
                 this.$router.push({name:"BuscarProducto"})
-            }
-        }, 
-            
+            },
         }, 
     }
 </script>
