@@ -4,8 +4,8 @@
         <nav>
             <input type="button" v-on:click="redirectToUserModule" value="Crear cliente">
             <input type="button" v-on:click="redirectToUserSearch" value="Buscar cliente">
+            <input type="button" v-on:click="redirectToProductSearch" value="buscar producto">
             <input type="button" value="Crear factura">
-            <input type="button" value="Crear producto">
             <input type="button" value="Crear proveedor">
         </nav>
     </div>
@@ -24,7 +24,11 @@
             },
             redirectToUserSearch:function(){
                 this.$router.push({name:"BuscarCliente"})
+            },
+            redirectToProductSearch:function(){
+                this.$router.push({name:"BuscarProducto"})
             }
+        }, 
             
         }, 
     }
