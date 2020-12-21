@@ -1,12 +1,11 @@
 <template>
     <div>
-        <header class="text-light">Usuario {{tipo_usuario}}</header>
+        <header class="text-light">Usuario {{tipo_usuario}} </header>
         <nav>
             <input type="button" v-on:click="redirectToUserModule" value="Crear cliente">
             <input type="button" v-on:click="redirectToUserSearch" value="Buscar cliente">
+            <input type="button" v-on:click="redirectToProductModule" value="Crear Producto">
             <input type="button" v-on:click="redirectToProductSearch" value="buscar producto">
-            <input type="button" value="Crear factura">
-            <input type="button" value="Crear proveedor">
         </nav>
     </div>
 </template>
@@ -24,6 +23,9 @@
             },
             redirectToUserSearch:function(){
                 this.$router.push({name:"BuscarCliente"})
+            },
+            redirectToProductModule:function(){
+                this.$router.push({name:"CrearProducto"})
             },
             redirectToProductSearch:function(){
                 this.$router.push({name:"BuscarProducto"})
