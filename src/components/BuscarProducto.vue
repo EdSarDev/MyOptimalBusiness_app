@@ -1,7 +1,7 @@
 <template>
     <div class="text-light container">
         <div>
-            <h3>Búsqueda de cliente: </h3>
+            <h3>Búsqueda de Producto: </h3>
         </div>
 
         <div class="container">
@@ -13,7 +13,7 @@
                 </div>  
             </form>
         </div>
-        <div class="container">
+        <div class="container text-light">
 
             <table class="table">
                 <thead>
@@ -67,9 +67,9 @@
                 axios.get("https://myoptimalbusiness-api.herokuapp.com/product/"+this.producto_in.id)
 
                     .then((result) => {
-                        this.idProducto = result.data.producto_id
+                        this.idProducto = result.data.product_id
                         this.nombreProducto = result.data.nombre_producto
-                        this.tipo_producto = result.data.tipo_producto
+                        this.tipoProducto = result.data.tipo_producto
                         this.ventaProducto = result.data.valor_venta
                     })
 
