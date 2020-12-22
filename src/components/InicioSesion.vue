@@ -56,12 +56,12 @@
                             //this.$router.push({name:"CrearUsuario"})
 
                         }else{
-                            this.salida = "Autorización fallida";
+                            this.salida = "El usuario o la contraseña son incorrectos";
                         }
                     })
 
                     .catch((error) => {
-                        this.salida="Se ha producido un error";
+                        this.salida="El usuario o la contraseña son incorrectos";
                     })
             }
         },
