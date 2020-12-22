@@ -30,7 +30,8 @@
                         <button type="submit" class="btn btn-info">Crear cliente</button>
                     </div>
                 </form>
-            <h3 class="text-center"> {{respuesta}}</h3>
+
+            <h3 class="text-center py-4"> {{respuesta}}</h3>
                 
             </div>
             <div class="col-md-4"></div>      

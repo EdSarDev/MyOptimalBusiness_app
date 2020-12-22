@@ -1,28 +1,49 @@
 <template>
     <div class="text-light container">
         <div>
-            <h3>Búsqueda de cliente: </h3>
+            <h3 class="py-3">Búsqueda de cliente: </h3>
         </div>
 
         <div class="container">
-            <label for="id_cliente"> Ingrese el id del cliente  </label>
-            <input type="text" v-model="client_in.client_id" required placeholder="IdCliente">
-            <input type="button" v-on:click="bringClientData" value="Buscar cliente">
+            <label class="m-0" for="id_cliente"> Ingrese el ID del cliente  </label>
+            <input class= "mx-2" type="text" v-model="client_in.client_id" required placeholder="IdCliente">
+            <input class="btn btn-info" type="button" v-on:click="bringClientData" value="Buscar">
         </div>
-        <div class="container">
-            <h6> Identificación del cliente </h6>
-            <p> {{idCliente}} </p>
-            <h6> Nombre del cliente </h6>
-            <p> {{nomCliente}} </p>
-            <h6> Apellido del cliente </h6>
-            <p> {{apCliente}} </p>
-            <h6> Email </h6>
-            <p> {{emCliente}} </p>
-            <h6> Celular </h6>
-            <p> {{ceCliente}} </p>
+        <div class="container py-2">
 
+            <table class="table text-light">
+                <thead>
+                    <tr>
+                        <th scope="col">Info Cliente</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td scope="row">Identificación del cliente</td>
+                        <td scope="row">{{idCliente}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> Nombre del cliente </td>
+                        <td scope="row">{{nomCliente}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"> Apellido del cliente </td>
+                        <td scope="row">{{apCliente}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">Email</td>
+                        <td scope="row">{{emCliente}}</td>
+                    </tr>   
+                    <tr>
+                        <td scope="row">Celular </td>
+                        <td scope="row">{{ceCliente}}</td>
+                    </tr>     
+                </tbody>
+            </table>
         </div>
-</div>
+    </div>
 </template>
 <script>
     import axios from 'axios';
@@ -73,7 +94,5 @@
         created:function(){
             this.login=this.$route.params.login
         }
-        
-
     }
 </script>

@@ -3,7 +3,7 @@
         <div class="block"> 
             <div class="col-md-4"></div>
             <div class="col-md-4 m-auto bg-muted text-light p-1">
-                <h2 class="text-center tipoh1">¡Bienvenido(a) al sistema de información de {nombre_empresa}!</h2>
+                <h2 class="text-center tipoh1">¡Bienvenido(a) al sistema de información de Empresa Genérica!</h2>
                 <h4 class="text-center tipoh1">Inicia sesión para continuar</h4>
                 
                 <form v-on:submit.prevent="processAuthUser">
@@ -19,7 +19,7 @@
                         <button type="submit" class="btn btn-info">Continuar</button>
                     </div>
                 </form>
-                <div class="col-md-12 text-center">
+                <div class="col-md-12 text-center py-3">
                     <h3> {{salida}}</h3>
                 </div>
 
